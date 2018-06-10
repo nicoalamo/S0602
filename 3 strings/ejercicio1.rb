@@ -3,5 +3,14 @@
 # hint: El método .include? de un string busca si un caracter
 # o string dado está contenido en éste.
 
+
 cadena = 'Hola Mundo!'
 caracter = 'o'
+
+def buscar_caracter(string, caracter)
+  string.include? caracter
+end
+
+resultado = buscar_caracter(cadena, caracter)
+
+puts resultado
