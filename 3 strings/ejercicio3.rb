@@ -6,3 +6,64 @@
 
 a = [1, 2, 3, 9, 12, 31, 'domingo']
 b = %w[lunes martes miércoles jueves viernes sábado domingo]
+
+puts '-----------Ej1------------'
+
+puts ''
+puts 'Arreglo A:'
+puts a
+
+puts ''
+puts 'Arreglo B:'
+puts b
+
+c = a + b
+
+puts ''
+puts 'Arreglo C (A+B):'
+puts c
+
+puts ''
+puts '-----------Ej2------------'
+
+d1 = []
+d2 = []
+d3 = []
+
+a.each_with_index do |value_a, index|
+  d1.push(value_a)
+  if a[index] != b[index]
+    d2.push(b[index])
+  end
+end
+
+d3 = d1 + d2
+
+puts 'Arreglo D (Union de A y B):'
+puts d3
+
+puts ''
+puts '-----------Ej3------------'
+
+e = []
+
+a.each_with_index do |value_a, index|
+  if a[index] == b[index]
+    e.push(value_a)
+  end
+end
+
+puts 'Arreglo E (Intersección de A y B):'
+puts e
+
+puts ''
+puts '-----------Ej4------------'
+
+f = []
+
+a.each_with_index do |value_a, index|
+  f[index] = [value_a, b[index]]
+end
+
+puts 'Arreglo F (Union de A y B):'
+puts f
